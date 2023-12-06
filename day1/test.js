@@ -17,7 +17,7 @@ const wordsToNums = new Map([
 
 function parseNums(str) {
   for (const num of wordsToNums.keys()) {
-    str = str.replace(num, `${num}${wordsToNums.get(num)}`);
+    str = str.replaceAll(num, `${num}${wordsToNums.get(num)}${num}`);
   }
   return str;
 }
